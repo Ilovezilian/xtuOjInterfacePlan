@@ -1,5 +1,5 @@
-# xtuOjInterfacePlan
-## This is xtu online judge interface plan
+# xtuOjProject
+## This is xtu online judge Project
 
 ---
 
