@@ -1,83 +1,101 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Ilovezilian
-  Date: 2017/2/25
-  Time: 23:13
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>$Title$</title>
+<head>
+<title>XTU Online Judgement System</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- for bootstrap working -->
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<script src="js/responsiveslides.min.js"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      // Slideshow 1
+      $("#slider1").responsiveSlides({
+         auto: true,
+		 nav: true,
+		 speed: 500,
+		 namespace: "callbacks",
+      });
+    });
+ </script>
+  <!-- web-fonts -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600italic,400italic,600,300italic,300,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+</head>
+<body>
+	<!-- header-section-starts-here -->	
+	<div class="header" id="movetop">
+	<div class="container">
+			<div class="header-top">			
+				<div class="logo">
+					<img src="images/logo.png" style="height: 87px; width: 316px; "><a></a>
+				</div>
+				             
+				<div class="clearfix"></div>
+			</div>
+			<!-- navigation -->
+			<div class="navigation">
+					<nav class="navbar navbar-default">
+					 
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						</div>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="theme.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <!-- Bootstrap core CSS -->
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-
-    <!-- Custom styling plus plugins -->
-    <link href="css/custom.css" rel="stylesheet">
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.form.js" type="text/javascript"></script>
-    <script src="js/json.parse.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </head>
-  <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Bootstrap theme</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="dropdown open">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!--/.nav-collapse -->
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+							  <ul class="nav navbar-nav">
+								<li class="active"><a href=<%=basePath+"index.jsp"%>>>首页</a></li>
+								<li><a href=<%=basePath+"problems.jsp"%>>题库</a></li>
+								<li><a href=<%=basePath+"test.jsp"%>>考试</a></li>
+								<li><a href=<%=basePath+"ranklist.jsp"%>>Ranklist</a></li>
+								<li><a href=<%=basePath+"status.jsp"%>>Status</a></li>
+							  </ul>
+						  <div class="clearfix"></div>
+						</div><!-- /.navbar-collapse -->
+					</nav>
+			</div>
+			<!-- //navigation -->
+		</div>
+	<!-- header-section-ends-here -->
+	</div>
+	<div class="slider">
+	    <ul class="rslides" id="slider1" style="padding-bottom:0;margin-bottom:0;">
+	      <li><img src="images/display1.jpg" alt=""></li>
+	      <li><img src="images/display2.jpg" alt=""></li>
+	      <li><img src="images/display3.jpg" alt=""></li>
+	      <li><img src="images/display4.jpg" alt=""></li>
+	      <li><img src="images/display5.jpg" alt=""></li>
+	    </ul>
     </div>
-  </nav>
-  <p>hello panshuai</p>
-  </body>
+    <%@ include file="copyright.html" %>
+	
+</body>
 </html>
