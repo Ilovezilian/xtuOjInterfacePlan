@@ -1,11 +1,9 @@
 tmp.md
 #XTU_ONLINE_JUDGE_DETAIL_DESIGN.md
 #myDairyPlan.xlsx
-
 ignoreSource
 ignoreSource/
 #idea
 *.iml
-
 #java
-*class
+*.class
