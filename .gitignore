@@ -4,4 +4,4 @@ tmp.md
 
 ignoreSource
 ignoreSource/
-.iml
+*.iml
