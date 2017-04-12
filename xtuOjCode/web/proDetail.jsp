@@ -14,9 +14,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <style type="text/css">
   .proDetail{
     font-family:Times New Roman;
-    margin:10 30;
-    padding:20 250;
-    background-color:;
+    margin:10px 30px;
+    padding:20px 250px;
+    background-color:bisque;
   }
   .proDetail>p{
     font-family:Times New Roman;
@@ -61,7 +61,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	<div class="tail" align="center">
 	  <a class="btn btn-info btn-lg "  style="width:150px;" href="submit.jsp?id=10001">Submit code</a>
-	  <a class="btn btn-info btn-lg" style="width:150px; margin-left:40;" href="discuss.jsp?id=10001">Discuss</a>
+	  <a class="btn btn-info btn-lg" style="width:150px; margin-left:40px;" href="discuss.jsp?id=10001">Discuss</a>
 	</div>
 	<%@ include file="copyright.html"%>
  </body>
