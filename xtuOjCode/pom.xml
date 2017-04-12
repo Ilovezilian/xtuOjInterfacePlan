@@ -14,10 +14,11 @@
         <junit.version>4.12</junit.version>
         <maven.plugins.version>22</maven.plugins.version>
         <dbcp2.versioin>2.1.1</dbcp2.versioin>
-        <servlet.api.versioin>2.5</servlet.api.versioin>
-        <velocity.tools.version>2.0</velocity.tools.version>
+        <servlet.api.versioin>3.0.1</servlet.api.versioin>
+        <lang3.version>3.1</lang3.version>
+        <validation.api.version>1.0.0.GA</validation.api.version>
         <!--plugin-->
-        <lombok.version>1.16.16.0</lombok.version>
+        <lombok.version>1.16.16</lombok.version>
 
     </properties>
 
@@ -56,17 +57,25 @@
             <version>${servlet.api.versioin}</version>
         </dependency>
 
-        <!--velocity-->
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity-tools</artifactId>
-            <version>${velocity.tools.version}</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven -->
         <dependency>
             <groupId>org.projectlombok</groupId>
-            <artifactId>lombok-maven</artifactId>
+            <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
+        </dependency>
+
+        <!--lang3-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${lang3.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${validation.api.version}</version>
         </dependency>
 
     </dependencies>
