@@ -6,3 +6,6 @@ ignoreSource
 ignoreSource/
 #idea
 *.iml
+
+#java
+*class
