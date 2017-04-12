@@ -15,7 +15,7 @@ public class HomeControllerTest {
     public void home() throws Exception {
         com.xtu.web.HomeController controller = new HomeController();
         MockMvc mockMvc = standaloneSetup(controller).build();
-        mockMvc.perform(get("/")).andExpect(view().name("home"));
+        mockMvc.perform(get("/")).andExpect(view().name("index"));
 //        assertEquals("home", controller.home());
     }
 
