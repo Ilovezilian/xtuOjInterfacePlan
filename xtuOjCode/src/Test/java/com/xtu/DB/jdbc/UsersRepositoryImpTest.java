@@ -1,5 +1,7 @@
 package com.xtu.DB.jdbc;
 
+import com.xtu.DB.entity.UsersEntity;
+import com.xtu.tools.OUT;
 import org.junit.Test;
 
 /**
@@ -8,6 +10,9 @@ import org.junit.Test;
 public class UsersRepositoryImpTest {
     @Test
     public void count() throws Exception {
+        UsersRepositoryImp usersRepositoryImp = new UsersRepositoryImp();
+        UsersEntity entity = usersRepositoryImp.findOne("2013551830");
+        OUT.prt("user from db " , entity);
 
     }
 
