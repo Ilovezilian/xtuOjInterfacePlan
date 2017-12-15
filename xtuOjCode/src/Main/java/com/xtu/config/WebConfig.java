@@ -1,4 +1,4 @@
-package com.xtu.web;
+package com.xtu.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -20,7 +20,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/web/");
+        resolver.setPrefix("");
         resolver.setSuffix(".jsp");
         return resolver;
     }

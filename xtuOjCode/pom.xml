@@ -23,11 +23,11 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-plugins</artifactId>
-            <version>${maven.plugins.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-plugins</artifactId>-->
+            <!--<version>${maven.plugins.version}</version>-->
+        <!--</dependency>-->
 
         <!-- junit -->
         <dependency>
@@ -51,18 +51,18 @@
         </dependency>
 
         <!--servlet-->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>${servlet.api.versioin}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet</groupId>-->
+            <!--<artifactId>servlet-api</artifactId>-->
+            <!--<version>${servlet.api.versioin}</version>-->
+        <!--</dependency>-->
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.projectlombok</groupId>-->
+            <!--<artifactId>lombok</artifactId>-->
+            <!--<version>${lombok.version}</version>-->
+        <!--</dependency>-->
 
         <!--lang3-->
         <dependency>

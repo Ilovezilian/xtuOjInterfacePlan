@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <!--<servlet>-->
+    <!--<description>servlet for login</description>-->
+    <!--<display-name>loginServlet</display-name>-->
+    <!--<servlet-name>loginServlet</servlet-name>-->
+    <!--<servlet-class>com.xtu.servlets.loginServlet</servlet-class>-->
+  <!--</servlet>-->
+  <!--<servlet>-->
+    <!--<description>update student information</description>-->
+    <!--<display-name>updateStudentServlet</display-name>-->
+    <!--<servlet-name>updateStudentServlet</servlet-name>-->
+    <!--<servlet-class>com.xtu.servlets.updateStudentServlet</servlet-class>-->
+  <!--</servlet>-->
+  <!--<servlet>-->
+    <!--<description>user logout</description>-->
+    <!--<display-name>logoutServlet</display-name>-->
+    <!--<servlet-name>logoutServlet</servlet-name>-->
+    <!--<servlet-class>com.xtu.servlets.logoutServlet</servlet-class>-->
+  <!--</servlet>-->
+  <!--<servlet>-->
+    <!--<description>change password</description>-->
+    <!--<display-name>modityPasswordServlet</display-name>-->
+    <!--<servlet-name>modifyPasswordServlet</servlet-name>-->
+    <!--<servlet-class>com.xtu.servlets.modifyPasswordServlet</servlet-class>-->
+  <!--</servlet>-->
+  <!--前端控制器DispatcherServlet的配置-->
+  <servlet>
+    <servlet-name>chapter2</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <load-on-startup>1</load-on-startup><!--表示启动容器时初始化该Servlet-->
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>chapter2</servlet-name>
+    <!-- url-pattern 表示哪些请求交给 Spring Web MVC 处理， “/” 是用来定义默认 servlet 映射的。-->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>loginServlet</servlet-name>-->
+    <!--<url-pattern>/loginServlet</url-pattern>-->
+  <!--</servlet-mapping>-->
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>updateStudentServlet</servlet-name>-->
+    <!--<url-pattern>/updateStudentServlet</url-pattern>-->
+  <!--</servlet-mapping>-->
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>logoutServlet</servlet-name>-->
+    <!--<url-pattern>/logoutServlet</url-pattern>-->
+  <!--</servlet-mapping>-->
+  <!--<servlet-mapping>-->
+    <!--<servlet-name>modifyPasswordServlet</servlet-name>-->
+    <!--<url-pattern>/modifyPasswordServlet</url-pattern>-->
+  <!--</servlet-mapping>-->
+
+	<welcome-file-list>
+	<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+    
+    <error-page>
+    <error-code>404</error-code>
+    <location>/error404.jsp</location>
+    </error-page>
+
+</web-app>

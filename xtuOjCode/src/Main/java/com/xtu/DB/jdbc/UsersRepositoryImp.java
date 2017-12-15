@@ -5,7 +5,6 @@ import com.xtu.DB.entity.UsersEntity;
 import com.xtu.constant.Tables;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcOperations;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -15,22 +14,19 @@ import org.springframework.stereotype.Repository;
 public class UsersRepositoryImp implements UsersRepository {
 
     @Autowired
-    private JdbcTemplate jdbcTemplate;
-
-    @Autowired
     private JdbcOperations jdbcOperations;
 
     public Long count() {
         String selctCountSql = "SELECT count(user_id) FROM "
                 + Tables.USERS;
-        return jdbcTemplate.queryForObject(selctCountSql,
+        return jdbcOperations.queryForObject(selctCountSql,
                 Long.class);
     }
 
     public UsersEntity findOne(String id) {
         String finduserSql = "SELECT * FROM " + Tables.USERS
                 + " WHERE id = ?";
-        return jdbcTemplate.queryForObject(
+        return jdbcOperations.queryForObject(
                 finduserSql,
                 UsersEntity.class,
                 id);

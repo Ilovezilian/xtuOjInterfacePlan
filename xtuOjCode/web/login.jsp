@@ -20,11 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="formDiv">
  <form method="post" name="login" class="form-horizontal" action="loginServlet" role="form" >
  	<div class="form-group " id="tab-list"  class="loginType1">
- 	<div  class="col-md-offset-4 col-md-2">
- 	学生登录<input type="radio" class="loginType" name="loginType" value="0" checked="checked"></div>
-    <div  class="col-md-2">         
-              老师登录<input type="radio" class="loginType" name="loginType" value="1"></div>
-	</div> 
+	</div>
  	<div class="form-group">
  		<label for="username" class="col-sm-2 col-sm-offset-2 control-label">账号：</label>
    		 <div class="col-sm-3">

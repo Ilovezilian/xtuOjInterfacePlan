@@ -28,7 +28,7 @@ public class MysqlConfig {
     public BasicDataSource basedataSource () {
         BasicDataSource ds = new BasicDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/exam2017?useUnicode=true&characterEncoding=utf8");
+        ds.setUrl("jdbc:mysql://localhost:3306/exam2017");
         ds.setUsername("root");
         ds.setPassword("nicai123456");
         ds.setInitialSize(5);
@@ -43,7 +43,7 @@ public class MysqlConfig {
     public DataSource dataSource() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/exam2017?useUnicode=true&characterEncoding=utf8");
+        ds.setUrl("jdbc:mysql://localhost:3306/exam2017");
         ds.setUsername("root");
         ds.setPassword("nicai123456");
         return ds;

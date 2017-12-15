@@ -1,6 +1,5 @@
-package com.xtu.web;
+package com.xtu.config;
 
-import com.xtu.config.RootConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**

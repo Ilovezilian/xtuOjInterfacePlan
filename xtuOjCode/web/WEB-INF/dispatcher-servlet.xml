@@ -2,5 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- HandlerMapping 表示将请求的URL和Bean名字映射
+           如URL为 “上下文/hello”，则Spring配置文件必须有一个名字为“/hello”的Bean，上下文默认忽略。-->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
 
+    <!-- HandlerAdapter 表示所有实现了org.springframework.web.controller.mvc.Controller接口的Bean
+    可以作为Spring Web MVC中的处理器。如果需要其他类型的处理器可以通过实现HadlerAdapter来解决。-->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
 </beans>
